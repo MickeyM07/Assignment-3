@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
+    margin: 10%;
     padding: 0;
     display: flex;
     justify-content: center;
@@ -21,10 +21,19 @@ body {
 .ambiguous-case-section,
 .newtons-method-section,
 .polynomial-function-section {
+    text-align:center;
     background-color: white;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#herons-formula-error,
+#polynomial-function-error{
+    color: red;
+    position:relative;
+    bottom:5px;
+    font-size:10px;
 }
 
 h1 {
@@ -39,7 +48,7 @@ h6 {
 
 input[type="number"],
 input[type="text"] {
-    width: 100%;
+    width: 90%;
     padding: 8px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
@@ -55,7 +64,7 @@ input[type="submit"] {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    width:100%;
+    width:90%;
 }
 
 input[type="submit"]:hover {

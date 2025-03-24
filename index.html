@@ -19,21 +19,22 @@
             <h6>Side c:</h6>
             <input id="herons-formula-c" type="number">
             <h6>Area:</h6>
-            <input id="herons-formula-result" type="text">
+            <input id="herons-formula-result" type="text" readonly>
             <h6 id="herons-formula-error"></h6>
             <input id="herons-formula-calculate" type="submit" value="Calculate"></input>
         </div>
 
         <div class="ambiguous-case-section">
             <h1>Ambiguous Case</h1>
+            <h6>Angle A:</h6>
+            <input id="ambiguous-case-angle-A" type="number">
             <h6>Side a:</h6>
             <input id="ambiguous-case-a" type="number">
             <h6>Side b:</h6>
             <input id="ambiguous-case-b" type="number">
-            <h6>Side c:</h6>
-            <input id="ambiguous-case-c" type="number">
             <h6>Triangle Type</h6>
-            <input id="ambiguous-case-result" type="text">
+            <input id="ambiguous-case-result" type="text" readonly>
+            <h6 id="ambiguous-case-error"></h6>
             <input id="ambiguous-case-calculate" type="submit" value=Calculate></input>
         </div>
 
@@ -42,7 +43,7 @@
             <h6>Root guess:</h6>
             <input id="newtons-method-root-guess" type="number">
             <h6>Root approximation:</h6>
-            <input id="newtons-method-result" type="text">
+            <input id="newtons-method-result" type="text" readonly>
             <input id="newtons-method-calculate" type="submit" value="Calculate"></input>
         </div>
 
@@ -54,10 +55,13 @@
             <input id="polynomial-function-exponents" type="text">
             <h6>x Value:</h6>
             <input id="polynomial-function-x" type="number">
-            <h6>Answer:</h6>
-            <input id="polynomial-function-result" type="text">
+            <h6>Polynomial Function:</h6>
+            <input id="polynomial-function-result" type="text" readonly>
+            <h6>Polynomial Evaluation:</h6>
+            <input id="polynomial-evaluation-result" type="text" readonly>
             <h6 id="polynomial-function-error"></h6>
             <input id="polynomial-function-calculate" type="submit" value="Calculate"></input>
+
         </div>
     </div>
     <script src="calculators.js"></script>

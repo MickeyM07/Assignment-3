@@ -29,7 +29,8 @@ body {
 }
 
 #herons-formula-error,
-#polynomial-function-error{
+#polynomial-function-error,
+#ambiguous-case-error{
     color: red;
     position:relative;
     bottom:5px;

@@ -12,7 +12,7 @@ function heron() {
         if (a > 0 && b > 0 && c > 0) {
             if (valueInRoot > 0) {
                 area.value = Math.round(Math.sqrt((4 * a ** 2 * b ** 2 - (a ** 2 + b ** 2 - c ** 2) ** 2)) / 4 * 100) / 100;
-                errorText.HTML = "";
+                errorText.innerHTML = "";
             } else {
                 errorText.innerHTML = "the length of each side must be smaller than the sum of the two others";
                 area.value = "";
@@ -27,8 +27,8 @@ function heron() {
     }
 }
 
-const heronbtn = document.getElementById('herons-formula-calculate');
-heronbtn.addEventListener('click', heron);
+const heronBtn = document.getElementById('herons-formula-calculate');
+heronBtn.addEventListener('click', heron);
 
 // Ambiguous case code
 
@@ -75,8 +75,8 @@ function ambiguous() {
     }
 }
 
-const ambiguousbtn = document.getElementById('ambiguous-case-calculate');
-ambiguousbtn.addEventListener('click', ambiguous);
+const ambiguousBtn = document.getElementById('ambiguous-case-calculate');
+ambiguousBtn.addEventListener('click', ambiguous);
 
 // Newton's method code
 
@@ -106,8 +106,8 @@ function newton() {
     }
 }
 
-const newtonbtn = document.getElementById('newtons-method-calculate');
-newtonbtn.addEventListener('click', newton);
+const newtonBtn = document.getElementById('newtons-method-calculate');
+newtonBtn.addEventListener('click', newton);
 
 // Polynomial function code
 
@@ -115,8 +115,8 @@ function polynomial() {
     const coefficients = (document.getElementById('polynomial-function-coefficients').value).split(' ');
     const exponents = (document.getElementById('polynomial-function-exponents').value).split(' ');
     const xvalue = parseFloat(document.getElementById('polynomial-function-x').value);
-    const functionresult = document.getElementById('polynomial-function-result');
-    const evaluationresult = document.getElementById('polynomial-evaluation-result');
+    const functionResult = document.getElementById('polynomial-function-result');
+    const evaluationResult = document.getElementById('polynomial-evaluation-result');
     const errorText = document.getElementById('polynomial-function-error');
     let validInput = true;
 
@@ -153,24 +153,26 @@ function polynomial() {
                 default:
                     func[0] += (coefficients[i] === 0) ? "" : `x^${exponents[i]}`;
             }
-            if (i < coefficients.length - 1 && i>0) {
-                if (coefficients[i + 1] > 0) {
-                    func[0] += " + ";
-                } else if (coefficients[i + 1] < 0) {
-                    func[0] += " - ";
+            if (i < coefficients.length - 1) {
+                if (coefficicents[i] != 0 || i != 0) {
+                    if (coefficients[i + 1] > 0) {
+                        func[0] += " + ";
+                    } else if (coefficients[i + 1] < 0) {
+                        func[0] += " - ";
+                    }
                 }
             }
             func[1] += coefficients[i] * xvalue ** exponents[i];
         }
         func[1] = Math.round(func[1] * 100) / 100;
-        functionresult.value = `f(x) = ${func[0]}`;
-        evaluationresult.value = `f(${xvalue}) = ${func[1]}`;
+        functionResult.value = `f(x) = ${func[0]}`;
+        evaluationResult.value = `f(${xvalue}) = ${func[1]}`;
     } else {
         errorText.innerHTML = "please input numbers that make sense";
-        functionresult.value = "";
-        evaluationresult.value = "";
+        functionResult.value = "";
+        evaluationResult.value = "";
     }
 }
 
-const polynomialbtn = document.getElementById('polynomial-function-calculate');
-polynomialbtn.addEventListener('click', polynomial);
+const polynomialBtn = document.getElementById('polynomial-function-calculate');
+polynomialBtn.addEventListener('click', polynomial);
